@@ -29,5 +29,5 @@ cacheSolve <- function(x, ...) {
         x$set_reverse(res)
         return(res)
     }
-    x$get_reverse()
+    r
 }

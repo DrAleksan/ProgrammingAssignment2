@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Write a short comment describing this function
+
+## Create a CacheMatrix from matrix x. Variable r for reverse
 
 makeCacheMatrix <- function(x = matrix()) {
     r <- NULL
@@ -20,17 +19,15 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## Checking if reverse hadn't been solved and return it if it does, otherwise solve and remember it
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
     r <- x$get_reverse()
     if(is.null(r)){
-        print("remembered")
         res <- solve(x$get())
         x$set_reverse(res)
         return(res)
     }
-    print("used")
     x$get_reverse()
 }
